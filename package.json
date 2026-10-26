@@ -1,0 +1,19 @@
+{
+  "name": "best-valuation",
+  "version": "1.0.0",
+  "description": "Certified Asset Valuation in Pakistan - Property, Vehicles, Gold, Stock & Net Worth",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "audit": "node audit.js",
+    "start": "node serve.js"
+  },
+  "keywords": [
+    "valuation",
+    "pakistan",
+    "property-valuation",
+    "asset-valuation"
+  ],
+  "author": "The Experts – A House of Prudent (Pvt.) Ltd.",
+  "license": "ISC"
+}
