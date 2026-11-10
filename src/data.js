@@ -309,53 +309,6 @@ const services = [
       { q: 'Do I need separate reports as well?', a: 'Usually not — the net worth report incorporates them. Some embassies still ask for the individual property or gold certificate alongside it; we can issue both as a bundle at a reduced combined fee.' },
       { q: 'How current does it need to be?', a: 'Most authorities want a report dated within three months of submission. Tell us your filing date and we will time the report accordingly.' }
     ]
-  },
-  {
-    slug: 'back-date-valuation',
-    meta: "Back-dated valuation in Pakistan establishing an asset's value at a past date for capital gains, inheritance and court use. Evidenced and cited, from Rs. 8,000.",
-    icon: 'clock',
-    image: 'assets/img/hero/backdate.jpg',
-    imageAlt: 'Archived ledger and historical market transaction evidence',
-    name: 'Back-Date Valuation',
-    short: 'What an asset was worth on a specific past date, evidenced from archived market data.',
-    price: 8000,
-    turnaround: '3 – 5 working days',
-    hero: 'Establish what an asset was worth on a date that has already passed — evidenced, defensible, and built for tax and litigation.',
-    intro: 'Capital gains assessments, inheritance disputes, historical wealth statements and long-running court cases all turn on a value as at a date in the past. We reconstruct that value from archived transaction records, historical bullion and exchange rates, contemporaneous rate notifications and period market evidence — and we show our sources, because a back-dated figure without evidence behind it will not survive challenge.',
-    covers: [
-      'Property as at a past date',
-      'Gold and jewellery at historical rates',
-      'Vehicles at prior-year market value',
-      'Estate assets at date of death',
-      'Business or shareholding at a transaction date',
-      'Any asset tied to a specific legal cut-off'
-    ],
-    purposes: [
-      'Capital gains tax computation',
-      'Inheritance valued at date of death',
-      'Revised or historical wealth statements',
-      'Court and arbitration evidence',
-      'Partnership dissolution as at exit date',
-      'Retrospective insurance settlement'
-    ],
-    documents: [
-      'CNIC or passport',
-      'Ownership documents showing the acquisition date',
-      'The exact date the valuation must be made as at',
-      'Purchase deed, invoice or receipt from that period',
-      'Death certificate or court order, where relevant',
-      'Any earlier valuation reports you already hold'
-    ],
-    methods: [
-      { name: 'Archived comparables', body: 'Transactions recorded in the same locality within the target period, sourced from registry records and period listings.' },
-      { name: 'Official rate notifications', body: 'DC rates, FBR valuation tables and published bullion rates as they stood on the relevant date, cited in the report.' },
-      { name: 'Indexed reconstruction', body: 'Where direct evidence is thin, present value reasoned backwards using documented market movement, with the method stated openly.' }
-    ],
-    faqs: [
-      { q: 'How far back can you go?', a: 'Routinely 20 to 25 years for property in documented schemes, and further where registry or society records survive. Tell us the date and we will confirm what evidence exists before you commit.' },
-      { q: 'Will FBR or a court accept it?', a: 'A back-dated valuation is accepted when the evidence is disclosed. Every source we rely on is cited in the report so it can be independently verified — which is exactly why unsupported back-dated certificates get rejected.' },
-      { q: 'Why does it take longer than a current valuation?', a: 'Because the data has to be retrieved rather than observed. Archive searches, registry extracts and period rate confirmations take time to assemble properly.' }
-    ]
   }
 ];
 
@@ -410,7 +363,7 @@ const useCases = [
     title: 'Inheritance',
     image: 'assets/img/usecases/inheritance.jpg',
     imageAlt: 'Family estate title deed, inheritance division agreement, and house keys',
-    body: 'Impartial figures for distributing an estate among heirs, including back-dated value at date of death.'
+    body: 'Impartial valuation figures for distributing an estate among heirs and resolving family settlements.'
   },
   {
     icon: 'handshake',
@@ -447,9 +400,8 @@ const faqs = [
   { q: 'What documents do I need to provide?', a: 'At minimum, your CNIC or passport and proof of ownership for the asset. The full checklist differs by asset — property needs the registry or transfer letter, vehicles need the registration book, gold needs the items themselves. Each service page lists exactly what is required.' },
   { q: 'Do you charge extra for the hard copy or delivery?', a: 'No. Stamped hard copies are couriered anywhere in Pakistan at no extra cost, and the signed PDF is emailed as soon as the report is ready.' },
   { q: 'Can you value assets across all Pakistan?', a: 'Yes. With our Head Office in Lahore, we cover Lahore, Karachi, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar, Quetta, and all other districts nationwide as standard.' },
-  { q: 'Is a physical inspection always necessary?', a: 'For built property, vehicles and jewellery, yes — a value defended without inspection is easy to challenge. For open plots in documented schemes and for back-dated valuations we can often work from records and archived market evidence. We will tell you which applies to your case before you commit.' },
+  { q: 'Is a physical inspection always necessary?', a: 'For built property, vehicles and jewellery, yes — a value defended without inspection is easy to challenge. For open plots in documented schemes we can often work from society records and verified market evidence. We will tell you which applies to your case before you commit.' },
   { q: 'How long does a valuation report remain valid?', a: 'There is no fixed expiry, but most embassies and banks want a report dated within three to six months of submission. Markets move, so an older report simply carries less weight. We can reissue a previous report at a reduced rate if your circumstances have not changed.' },
-  { q: 'Can you provide a valuation for a past date?', a: 'Yes — that is our back-date valuation service. We reconstruct the value as at a specific historical date from archived transaction records, official rate notifications and period market data, citing every source in the report.' },
   { q: 'How do I pay, and do you issue a receipt?', a: 'Bank transfer, cash or online payment. A receipt is issued for every payment, and the fee is confirmed in writing before work starts.' }
 ];
 

@@ -206,27 +206,6 @@ const serviceDemoConfigs = {
       { icon: 'bolt', text: '2 – 3 Working Days' },
       { icon: 'doc', text: 'Full Annexures Included' }
     ]
-  },
-  'back-date-valuation': {
-    image: 'assets/img/hero/backdate.jpg',
-    imageAlt: 'Historical Retrospective Valuation Specimen with Archival Records',
-    badge: 'Historical Valuation Demo',
-    tag: 'Court & Capital Gains Tax',
-    ref: 'BV/HIS/2026-0074',
-    docType: 'Retrospective Valuation Certificate',
-    rows: [
-      { label: 'Property Assessed', val: 'Commercial Plot, DHA Lahore Area' },
-      { label: 'Valuation As-Of Date', val: '30 June 2018 (Historical Record)' },
-      { label: 'Archival Sources', val: 'Sub-Registrar Gazette & Past Deeds' },
-      { label: 'Legal Standing', val: 'Civil Court & FBR Dispute Ready' }
-    ],
-    valueLabel: 'Historical Value (2018)',
-    value: 'PKR 6,20,00,000',
-    chips: [
-      { icon: 'scale', text: 'Court & FBR Admissible' },
-      { icon: 'doc', text: 'Gazette Verified Data' },
-      { icon: 'shield', text: 'Historical Archives' }
-    ]
   }
 };
 
@@ -589,7 +568,7 @@ function servicesIndex() {
     image: 'assets/img/hero/services.jpg',
     imageAlt: 'Multi-Asset Valuation Portfolio Best Valuation Lahore',
     badge: 'Multi-Asset Suite Demo',
-    tag: 'All 6 Asset Disciplines',
+    tag: 'All 5 Asset Disciplines',
     ref: 'BV/SUITE/2026-EXP',
     docType: 'Asset Valuation Practice Portfolio',
     rows: [
@@ -610,7 +589,7 @@ function servicesIndex() {
 ${pageHero({
   eyebrow: 'Our services',
   title: 'Valuation reports for <em>every asset that has to be proven.</em>',
-  lead: 'Property, vehicles, gold, stock, net worth and historical values — each prepared on the correct basis for the authority that will read it.',
+  lead: 'Property, vehicles, gold, stock and net worth certificates — each prepared on the correct basis for the authority that will read it.',
   trail: [{ label: 'Home', href: 'index.html' }, { label: 'Services' }],
   visual
 })}
@@ -642,8 +621,8 @@ ${pageHero({
           <tr><td>Jewellery declared in an application</td><td><a href="gold-valuation.html">Gold &amp; Jewellery Valuation</a></td><td>Same day</td></tr>
           <tr><td>An insurance claim on a damaged car</td><td><a href="vehicle-valuation.html">Vehicle Valuation</a></td><td>Same day</td></tr>
           <tr><td>A bank running-finance limit against stock</td><td><a href="stock-valuation.html">Stock &amp; Inventory Valuation</a></td><td>2 – 4 working days</td></tr>
-          <tr><td>Capital gains tax on a property sold</td><td><a href="back-date-valuation.html">Back-Date Valuation</a></td><td>3 – 5 working days</td></tr>
-          <tr><td>Dividing an inherited estate between heirs</td><td><a href="property-valuation.html">Property</a> + <a href="back-date-valuation.html">Back-Date</a></td><td>3 – 5 working days</td></tr>
+          <tr><td>Capital gains tax or FBR filing on property</td><td><a href="property-valuation.html">Property Valuation</a></td><td>1 working day</td></tr>
+          <tr><td>Dividing an inherited estate between heirs</td><td><a href="property-valuation.html">Property</a> + <a href="net-worth-report.html">Wealth Certificate</a></td><td>2 – 3 working days</td></tr>
           <tr><td>A court case where value is disputed</td><td>Depends on the asset — <a href="contact.html">call us first</a></td><td>Confirmed on review</td></tr>
         </tbody>
       </table>
@@ -659,7 +638,7 @@ ${ctaBand({ title: 'Still not sure? One call settles it.', lead: 'Describe the a
   return {
     file: 'services.html',
     title: 'Valuation Services in Pakistan | Best Valuation',
-    description: 'Six certified valuation services in Pakistan: property, vehicle, gold, stock, wealth certificates and back-date reports for visa, court and bank use.',
+    description: 'Five certified valuation services in Pakistan: property, vehicle, gold, stock and wealth certificates for visa, court and bank use.',
     body
   };
 }
@@ -841,7 +820,7 @@ ${pageHero({
           <li>Distance and travel outside standard coverage</li>
           <li>Number of assets or items in one report</li>
           <li>Urgency — same-day handling on a deadline</li>
-          <li>Depth of evidence needed for court or back-date work</li>
+          <li>Depth of evidence needed for court or specialized audit work</li>
         </ul>
       </div>
       <div class="note">
@@ -876,7 +855,7 @@ ${pageHero({
       <a class="btn btn--primary btn--sm" href="contact.html">Get a written quote ${icon('arrow', { size: 15 })}</a>
     </div>
     <div class="faq-layout__main">
-      ${faqList([faqs[2], faqs[4], faqs[9], faqs[5], faqs[7]], 'price-faq')}
+      ${faqList([faqs[2], faqs[4], faqs[8], faqs[5], faqs[7]], 'price-faq')}
     </div>
   </div>
 </section>
@@ -888,7 +867,7 @@ ${ctaBand({ title: 'Get a firm quote in writing.', lead: 'Send the asset details
     file: 'pricing.html',
     title: 'Valuation Charges & Rates in Pakistan | Best Valuation',
     description: 'Transparent valuation pricing across Pakistan. Property and vehicle from Rs. 5,000, gold Rs. 6,000, net worth Rs. 12,000. No hidden, revision or delivery charges.',
-    schema: [faqSchema([faqs[2], faqs[4], faqs[9], faqs[5], faqs[7]])],
+    schema: [faqSchema([faqs[2], faqs[4], faqs[8], faqs[5], faqs[7]])],
     body
   };
 }
@@ -939,7 +918,7 @@ ${pageHero({
       <p class="lede">Most people come to us with a deadline and a form that has a box on it marked “value of assets”. What they actually need is not a number — it is a document that the embassy, the court, the bank or the tax authority will accept without argument.</p>
       <p>That distinction shapes everything we do. Before we quote, we ask who is going to read the report, because a bank credit committee, a visa officer and a civil judge each want something different on the page. Then we inspect, gather comparable evidence from the specific locality, apply the method appropriate to the purpose, and set out our reasoning so it can be checked.</p>
       <p>We are a certified valuation company by SECP and PBA with our Head Office in Lahore, serving clients across all Pakistan. We track submarket dynamics in detail — from prime residential societies to commercial centres and industrial estates across all provinces. That local depth and reliance on current market rates of Pakistan is what separates a defensible valuation from a plausible guess.</p>
-      <p>The practice covers property, vehicles, gold and jewellery, stock and inventory, consolidated net worth statements, and back-dated valuations for tax and litigation. Whatever the asset, the standard is the same: show the evidence, state the method, sign the certificate.</p>
+      <p>The practice covers property, vehicles, gold and jewellery, stock and inventory, and consolidated net worth certificates. Whatever the asset, the standard is the same: show the evidence, state the method, sign the certificate.</p>
     </div>
     <aside class="about__facts" data-reveal>
       <div class="fact-card">
