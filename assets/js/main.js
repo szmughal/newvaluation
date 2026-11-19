@@ -240,12 +240,15 @@
     }
   }
 
-  /* ---------- testimonial carousel (automatic slider) --------------------- */
+  /* ---------- testimonial carousel (manual controls) ---------------------- */
   $$('[data-carousel]').forEach(function (car) {
     var track = $('[data-track]', car);
     var prev = $('[data-prev]', car);
     var next = $('[data-next]', car);
     if (!track) return;
+
+    // Ensure carousel always starts at the beginning (first card) and stays stationary
+    track.scrollLeft = 0;
 
     function step() {
       var card = track.querySelector('.tcard');
@@ -281,59 +284,22 @@
     if (prev) {
       prev.addEventListener('click', function () {
         slidePrev();
-        resetAutoPlay();
       });
     }
 
     if (next) {
       next.addEventListener('click', function () {
         slideNext();
-        resetAutoPlay();
       });
     }
 
     track.addEventListener('scroll', sync, { passive: true });
     window.addEventListener('resize', sync);
     track.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowRight') { e.preventDefault(); slideNext(); resetAutoPlay(); }
-      if (e.key === 'ArrowLeft')  { e.preventDefault(); slidePrev(); resetAutoPlay(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); slideNext(); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); slidePrev(); }
     });
     sync();
-
-    /* Auto-play slider */
-    var autoPlayTimer = null;
-    var autoPlayInterval = 3800; // 3.8 seconds per slide
-
-    function startAutoPlay() {
-      if (reduced) return;
-      stopAutoPlay();
-      autoPlayTimer = setInterval(function () {
-        slideNext();
-      }, autoPlayInterval);
-    }
-
-    function stopAutoPlay() {
-      if (autoPlayTimer) {
-        clearInterval(autoPlayTimer);
-        autoPlayTimer = null;
-      }
-    }
-
-    function resetAutoPlay() {
-      stopAutoPlay();
-      startAutoPlay();
-    }
-
-    // Pause on hover, touch, or keyboard focus
-    car.addEventListener('mouseenter', stopAutoPlay);
-    car.addEventListener('mouseleave', startAutoPlay);
-    car.addEventListener('touchstart', stopAutoPlay, { passive: true });
-    car.addEventListener('touchend', startAutoPlay, { passive: true });
-    car.addEventListener('focusin', stopAutoPlay);
-    car.addEventListener('focusout', startAutoPlay);
-
-    // Start auto-play initially
-    startAutoPlay();
   });
 
   /* ---------- contact form ----------------------------------------------- */
